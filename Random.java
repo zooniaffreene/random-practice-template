@@ -1,49 +1,30 @@
+import java.util.Random;
+
 public class Random {
 
-    // generates a random integer from 1 - 10, inclusive of both
+    // generates a random integer from 1 - 10, inclusive
     public static int random1To10() {
-        int rand = 0;
-        // TODO: Code here
-        return rand;
+        return (int)(Math.random() * 10) + 1;
     }
 
-    // generates a random integer from 1 - N, inclusive of both
-    public static int random1ToN(int n)
-    {
-        int rand = 0;
-        // TODO: Code here
-        return rand;
+    public static int random1ToN(int n) {
+        return (int)(Math.random() * n) + 1;
     }
 
-    // generates a random integer from x to y, inclusive of both.
-    public static int randomXtoY(int x, int y)
-    {
-        int rand = 0;
-        // TODO: Code here
-        return rand;
+    public static int randomXtoY(int x, int y) {
+        return (int)(Math.random() * (y - x + 1)) + x;
     }
 
-
-    // Helper - leave alone
     public static int getRandom(String type, int x, int y) {
-        if (type.equals("1to10"))
-        {
+        if (type.equals("1to10")) {
             return random1To10();
-        }
-        else if (type.equals("1toN"))
-        {
+        } else if (type.equals("1toN")) {
             return random1ToN(y);
-
-        }
-        else if (type.equals("XtoY"))
-        {
+        } else if (type.equals("XtoY")) {
             return randomXtoY(x, y);
-        }
-        else
-        {
+        } else {
             System.out.println("Error! Unknown type.");
         }
         return 0;
     }
-
 }
